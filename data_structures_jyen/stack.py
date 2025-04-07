@@ -8,7 +8,7 @@ class Stack:
         _Stack__items (list): Private list storing stack elements.
     """
 
-    def __init__(self, items=None):
+    def __init__(self, items=None) -> None:
         """
         Initialize a new Stack object.
 
@@ -21,7 +21,7 @@ class Stack:
         else:
             self.__items = list(items)  # Create copy to avoid reference issues
 
-    def push(self, element):
+    def push(self, element) -> None:
         """
         Add an element to the top of the stack.
 
@@ -30,7 +30,7 @@ class Stack:
         """
         self.__items.append(element)
 
-    def pop(self):
+    def pop(self) -> None:
         """
         Remove and return the element from the top of the stack.
 
@@ -76,7 +76,7 @@ class Stack:
         """
         return len(self.__items)
 
-    def is_empty(self):
+    def is_empty(self) -> bool:
         """
         Check if the stack contains no elements.
 
@@ -85,7 +85,7 @@ class Stack:
         """
         return len(self.__items) == 0
 
-    def display_stack(self):
+    def display_stack(self) -> None:
         """
         Display the entire stack contents.
 

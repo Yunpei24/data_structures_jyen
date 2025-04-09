@@ -377,6 +377,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       Example Notebook
@@ -526,6 +553,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       Example Notebook
@@ -557,15 +611,70 @@
 <p>A <strong>stack</strong> is a linear data structure that follows the <strong>LIFO</strong> (Last In First Out) principle.</p>
 <h2 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Elements are added (pushed) and removed (popped) from the <strong>top</strong>.</li>
-<li>Useful for undo operations, expression evaluation, and more.</li>
+<li>Elements are added (pushed) and removed (popped) from the <strong>top</strong></li>
+<li>Useful for undo operations, expression evaluation, and more</li>
+<li>Access is restricted to the top element only</li>
 </ul>
 <h2 id="common-operations">Common Operations<a class="headerlink" href="#common-operations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Time Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>push()</code></td>
+<td>Add an item to the top of stack</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>pop()</code></td>
+<td>Remove and return the top item</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>peek()</code></td>
+<td>View the top item without removing it</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>is_empty()</code></td>
+<td>Check if the stack is empty</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-representation">Visual Representation<a class="headerlink" href="#visual-representation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>     ┌────┐
+     │ 40 │ ← Top (Last In)
+     ├────┤
+     │ 30 │
+     ├────┤
+     │ 20 │
+     ├────┤
+     │ 10 │
+     ├────┤
+     │  5 │ ← Bottom (First In)
+     └────┘
+</code></pre></div>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Python's <code>Stack</code> class provides methods for standard stack operations with a private list for storage.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage:</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">Stack</span><span class="p">()</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">element</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># Returns 10</span>
+</code></pre></div>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>push()</code>: Add an item to the stack.</li>
-<li><code>pop()</code>: Remove the top item.</li>
-<li><code>peek()</code>: View the top item without removing it.</li>
-<li><code>is_empty()</code>: Check if the stack is empty.</li>
+<li>Function call management (call stack)</li>
+<li>Expression evaluation and syntax parsing</li>
+<li>Undo mechanisms in text editors</li>
+<li>Browser history tracking</li>
+<li>Backtracking algorithms</li>
 </ul>
 <h2 id="example-notebook">Example Notebook<a class="headerlink" href="#example-notebook" title="Permanent link">&para;</a></h2>
 <p>👉 See <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/stack_example.ipynb">Stack Example Notebook</a></p>

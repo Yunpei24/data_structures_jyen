@@ -441,9 +441,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-operations" class="md-nav__link">
     <span class="md-ellipsis">
       Common Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversal-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traversal Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
     </span>
   </a>
   
@@ -533,9 +560,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-operations" class="md-nav__link">
     <span class="md-ellipsis">
       Common Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversal-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traversal Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
     </span>
   </a>
   
@@ -573,20 +627,105 @@
 <p>A <strong>tree</strong> is a hierarchical data structure with nodes connected in parent-child relationships.</p>
 <h2 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The topmost node is called the <strong>root</strong>.</li>
-<li>Each node can have multiple children.</li>
+<li>The topmost node is called the <strong>root</strong></li>
+<li>Each node can have multiple children</li>
 <li>Used in file systems, databases, compilers, etc.</li>
+<li>No cycles (unlike graphs)</li>
+<li>Every node (except root) has exactly one parent</li>
 </ul>
 <h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Binary Tree</li>
-<li>Binary Search Tree (BST)</li>
-<li>AVL Tree</li>
-<li>Heap</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Tree Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binary Tree</td>
+<td>Each node has at most two children</td>
+</tr>
+<tr>
+<td>Binary Search Tree (BST)</td>
+<td>Left child &lt; parent &lt; right child</td>
+</tr>
+<tr>
+<td>AVL Tree</td>
+<td>Self-balancing BST</td>
+</tr>
+<tr>
+<td>Red-Black Tree</td>
+<td>Self-balancing BST with color properties</td>
+</tr>
+<tr>
+<td>B-Tree</td>
+<td>Self-balancing tree optimized for storage systems</td>
+</tr>
+<tr>
+<td>Heap</td>
+<td>Complete binary tree with heap property</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-representation">Visual Representation<a class="headerlink" href="#visual-representation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>        ┌───┐
+        │ 8 │        ← Root
+        └─┬─┘
+     ┌────┴────┐
+   ┌─┴─┐     ┌─┴─┐
+   │ 3 │     │ 10│
+   └─┬─┘     └─┬─┘
+  ┌──┴──┐      └──┐
+┌─┴─┐ ┌─┴─┐    ┌─┴─┐
+│ 1 │ │ 6 │    │ 14│
+└───┘ └───┘    └───┘
+</code></pre></div>
 <h2 id="common-operations">Common Operations<a class="headerlink" href="#common-operations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Time Complexity (BST)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>insert()</code></td>
+<td>Add a new node</td>
+<td>O(log n) average, O(n) worst</td>
+</tr>
+<tr>
+<td><code>delete()</code></td>
+<td>Remove a node</td>
+<td>O(log n) average, O(n) worst</td>
+</tr>
+<tr>
+<td><code>search()</code></td>
+<td>Find a node</td>
+<td>O(log n) average, O(n) worst</td>
+</tr>
+<tr>
+<td><code>traverse()</code></td>
+<td>Visit all nodes</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="traversal-methods">Traversal Methods<a class="headerlink" href="#traversal-methods" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>insert()</code>, <code>delete()</code>, <code>traverse()</code> (preorder, inorder, postorder)</li>
+<li><strong>Preorder</strong>: Root → Left → Right</li>
+<li><strong>Inorder</strong>: Left → Root → Right (gives sorted output for BST)</li>
+<li><strong>Postorder</strong>: Left → Right → Root</li>
+</ul>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
+<ul>
+<li>File systems organization</li>
+<li>Database indexing</li>
+<li>Decision trees in machine learning</li>
+<li>Expression evaluation</li>
+<li>Network routing algorithms</li>
 </ul>
 <h2 id="example-notebook">Example Notebook<a class="headerlink" href="#example-notebook" title="Permanent link">&para;</a></h2>
 <p>👉 See <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/tree_example.ipynb">Tree Example Notebook</a></p>

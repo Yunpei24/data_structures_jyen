@@ -412,6 +412,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#types-of-linked-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Linked Lists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -508,6 +544,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#types-of-linked-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Linked Lists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -536,14 +608,80 @@
 
 
 <h1 id="linked-list">Linked List<a class="headerlink" href="#linked-list" title="Permanent link">&para;</a></h1>
-<p>Linked List are basic data structures used to store elements in a contiguous memory location.</p>
+<p>A Linked List is a linear data structure where elements are stored in separate memory locations and connected through references (pointers).</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Fast index-based access</li>
-<li>Static size</li>
+<li><strong>Dynamic Size</strong>: Unlike arrays, linked lists can grow or shrink at runtime</li>
+<li><strong>Efficient Insertions/Deletions</strong>: Adding or removing elements doesn't require shifting other elements</li>
+<li><strong>No Random Access</strong>: Elements must be accessed sequentially from the first node</li>
+<li><strong>Extra Memory</strong>: Requires additional memory for storing references/pointers</li>
 </ul>
+<h2 id="types-of-linked-lists">Types of Linked Lists<a class="headerlink" href="#types-of-linked-lists" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Singly Linked List</strong>: Each node points to the next node</li>
+<li><strong>Doubly Linked List</strong>: Each node points to both next and previous nodes</li>
+<li><strong>Circular Linked List</strong>: Last node points back to the first node</li>
+</ol>
+<h2 id="visual-representation">Visual Representation<a class="headerlink" href="#visual-representation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Singly Linked List:
+┌─────┬─────┐    ┌─────┬─────┐    ┌─────┬─────┐
+│ A   │  ●──┼────▶ B   │  ●──┼────▶ C   │ null│
+└─────┴─────┘    └─────┴─────┘    └─────┴─────┘
+ data  next       data  next       data  next
+</code></pre></div>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">LinkedList</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">new_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">new_node</span>
+            <span class="k">return</span>
+
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">while</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+        <span class="n">current</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">new_node</span>
+</code></pre></div>
+<h2 id="time-complexity">Time Complexity<a class="headerlink" href="#time-complexity" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Time Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Insertion</td>
+<td>O(1)*</td>
+</tr>
+<tr>
+<td>Deletion</td>
+<td>O(1)*</td>
+</tr>
+</tbody>
+</table>
+<p>* When position is known, otherwise O(n) to find the position first</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<p>Check the <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/linked_list_example.ipynb">Array Notebook</a>.</p>
+<p>Check the <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/linked_list_example.ipynb">Linked List Notebook</a> for implementation details.</p>
+<hr />
+<p><em>Note: Unlike arrays, linked lists do not have fast index-based access or static size. They excel at dynamic memory allocation and efficient insertions/deletions.</em></p>
 
 
 

@@ -399,6 +399,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       Example Notebook
@@ -526,6 +553,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       Example Notebook
@@ -557,15 +611,64 @@
 <p>A <strong>queue</strong> is a linear data structure that follows the <strong>FIFO</strong> (First In First Out) principle.</p>
 <h2 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Elements are added from the <strong>rear</strong> and removed from the <strong>front</strong>.</li>
-<li>Used in scheduling, buffering, and task queues.</li>
+<li>Elements are added from the <strong>rear</strong> and removed from the <strong>front</strong></li>
+<li>Used in scheduling, buffering, and task queues</li>
+<li>Maintains insertion order for processing</li>
 </ul>
 <h2 id="common-operations">Common Operations<a class="headerlink" href="#common-operations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Time Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enqueue()</code></td>
+<td>Add an item to the rear of the queue</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>dequeue()</code></td>
+<td>Remove and return the front item</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>peek()</code></td>
+<td>View the front item without removing it</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td><code>is_empty()</code></td>
+<td>Check if the queue is empty</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-representation">Visual Representation<a class="headerlink" href="#visual-representation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>       enqueue                dequeue
+          ↓                      ↑
+        ┌────┬────┬────┬────┬────┐
+Rear → │ 40 │ 30 │ 20 │ 10 │  5 │ ← Front
+        └────┴────┴────┴────┴────┘
+</code></pre></div>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Python's <code>Queue</code> class uses a list-based implementation with operations that maintain FIFO behavior.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage:</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">element</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">dequeue</span><span class="p">()</span>  <span class="c1"># Returns 5</span>
+</code></pre></div>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>enqueue()</code>: Add an item to the queue.</li>
-<li><code>dequeue()</code>: Remove the front item.</li>
-<li><code>peek()</code>: View the front item.</li>
-<li><code>is_empty()</code>: Check if the queue is empty.</li>
+<li>Task scheduling in operating systems</li>
+<li>Print job queues</li>
+<li>BFS (Breadth-First Search) algorithm</li>
+<li>Request handling in web servers</li>
+<li>Call center systems</li>
 </ul>
 <h2 id="example-notebook">Example Notebook<a class="headerlink" href="#example-notebook" title="Permanent link">&para;</a></h2>
 <p>👉 See <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/queue_example.ipynb">Queue Example Notebook</a></p>

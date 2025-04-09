@@ -337,18 +337,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#characteristics" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
+      Characteristics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#common-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Common Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Notebook
     </span>
   </a>
   
@@ -499,18 +535,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#characteristics" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
+      Characteristics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#common-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Common Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Notebook
     </span>
   </a>
   
@@ -536,14 +608,75 @@
 
 
 <h1 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h1>
-<p>Arrays are basic data structures used to store elements in a contiguous memory location.</p>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<p>Arrays are fundamental data structures used to store elements in <strong>contiguous memory locations</strong>.</p>
+<h2 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Fast index-based access</li>
-<li>Static size</li>
+<li>Fast index-based access (constant time)</li>
+<li>Static size (fixed at creation time)</li>
+<li>Elements must be of the same type (in many languages)</li>
+<li>Memory efficient for random access operations</li>
 </ul>
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<p>Check the <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/array_example.ipynb">Array Notebook</a>.</p>
+<h2 id="common-operations">Common Operations<a class="headerlink" href="#common-operations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Time Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access</td>
+<td>Retrieve element at index</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>Add element at specific position</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Remove element at specific position</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Find element by value</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Change value at specified index</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-representation">Visual Representation<a class="headerlink" href="#visual-representation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>┌────┬────┬────┬────┬────┐
+│ 10 │ 20 │ 30 │ 40 │ 50 │
+└────┴────┴────┴────┴────┘
+  0    1    2    3    4    ← Indices
+</code></pre></div>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Python's <code>Array</code> class provides an implementation with fixed capacity and common array operations.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage:</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Create array with capacity 5</span>
+<span class="n">arr</span><span class="o">.</span><span class="n">insert_at</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">arr</span><span class="o">.</span><span class="n">insert_at</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">element</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Returns 10</span>
+</code></pre></div>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Storing and accessing sequential data</li>
+<li>Matrix operations</li>
+<li>Lookup tables and hash tables</li>
+<li>Image processing</li>
+<li>Buffer implementations</li>
+</ul>
+<h2 id="example-notebook">Example Notebook<a class="headerlink" href="#example-notebook" title="Permanent link">&para;</a></h2>
+<p>👉 See <a href="https://github.com/yunpei24/data_structures_jyen/blob/main/examples/array_example.ipynb">Array Example Notebook</a></p>
 
 
 

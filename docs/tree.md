@@ -21,6 +21,8 @@ A **tree** is a hierarchical data structure with nodes connected in parent-child
 | B-Tree | Self-balancing tree optimized for storage systems |
 | Heap | Complete binary tree with heap property |
 
+For this version, we implemented Binary Tree.
+
 ## Visual Representation
 
 ```plaintext

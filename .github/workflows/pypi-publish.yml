@@ -2,6 +2,8 @@ name: Upload Python Package on data structures to PyPI.
 
 on:
   push:
+    branches:
+      - "main"
     tags:
       - "v*"
 

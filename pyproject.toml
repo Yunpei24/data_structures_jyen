@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jyen-data-structure"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Python package implementing fundamental data structures such as arrays, stacks, queues, linked lists, graphs, and trees."
 readme = "README.md"
 authors = [

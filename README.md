@@ -1,6 +1,6 @@
 # JYEN Data Structures
 
-![PyPI](https://img.shields.io/pypi/v/jyen-data-structures)
+![PyPI](https://pypi.org/project/jyen-data-structure/)
 ![License](https://img.shields.io/github/license/Yunpei24/data_structures_jyen)
 [![Documentation](https://img.shields.io/badge/docs-online-blue)](https://yunpei24.github.io/data_structures_jyen/)
 

@@ -1,0 +1,73 @@
+# ========================
+# 📘 Project Configuration
+# ========================
+docs_dir: docs
+site_name: Data Structures by JYEN
+site_description: A comprehensive guide to data structures in Python.
+site_author: Joshua Juste Emmanuel Yun Pei NIKIEMA
+
+# 🌐 Live Documentation Site & GitHub Repository
+site_url: https://yunpei24.github.io/data_structures_jyen/
+repo_url: https://github.com/yunpei24/data_structures_jyen
+repo_name: yunpei24/data_structures_jyen
+
+# 📁 Navigation Bar
+nav:
+  - 🏠 Home: index.md
+  - 📦 Arrays: array.md
+  - 🗂️ Stacks: stack.md
+  - 📤 Queues: queue.md
+  - 🔗 Linked Lists: linked_list.md
+  - 🌳 Trees: tree.md
+  - 🌐 Graphs: graph.md
+
+# 🎨 Theme and Styling
+theme:
+  name: material
+  language: en
+  palette:
+    # Light theme color palette
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Dark theme color palette
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - navigation.instant       # Smooth page transitions
+    - navigation.top           # Return to top on scroll
+    - content.code.copy        # Copy code block buttons
+    - content.code.annotate    # Support for annotations on code
+    - search.highlight         # Highlights search results
+    - search.share             # Share search result links
+
+# 🧠 Markdown Extensions
+markdown_extensions:
+  - toc:
+      permalink: true
+  - footnotes
+  - codehilite
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true

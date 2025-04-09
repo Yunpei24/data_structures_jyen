@@ -1,4 +1,4 @@
-name: Upload Python Package to PyPI
+name: Upload Python Package on data structures to PyPI
 
 on:
   push:

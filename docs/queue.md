@@ -23,7 +23,7 @@ A **queue** is a linear data structure that follows the **FIFO** (First In First
        enqueue                dequeue
           ↓                      ↑
         ┌────┬────┬────┬────┬────┐
-Rear → │ 40 │ 30 │ 20 │ 10 │  5 │ ← Front
+ Rear → │ 40 │ 30 │ 20 │ 10 │  5 │ ← Front
         └────┴────┴────┴────┴────┘
 ```
 

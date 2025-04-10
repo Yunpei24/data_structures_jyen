@@ -11,7 +11,6 @@ A Python package implementing fundamental data structures including:
 - Queues
 - Linked Lists (Singly and Doubly)
 - Trees (Binary Tree, Binary Search Tree)
-- Graphs
 
 ## Installation
 

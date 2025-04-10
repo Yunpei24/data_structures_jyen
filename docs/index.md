@@ -13,7 +13,6 @@ Dive into well-organized sections, each dedicated to a fundamental data structur
 - ✅ **Queues** – First-In, First-Out (FIFO) workflows.
 - ✅ **Linked Lists** – Sequential nodes linked dynamically.
 - ✅ **Trees** – Hierarchical structures for sorted data.
-- ✅ **Graphs** – Representing relationships between elements.
 
 Each section includes:
 
